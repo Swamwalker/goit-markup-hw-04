@@ -17,6 +17,7 @@
     --secondary-background-color: #F5F4FA;
     --logo-text-color: #000000;
     --footer-bg: #2F303A;
+    --hero-bg-color: #C4C4C4;
     --hero-btn-hov-color: #188CE8;
     --footer-text-secondary-color: rgba(255, 255, 255, 0.6);
 }
@@ -114,23 +115,34 @@ a {
 }
 .navigation .link:focus,
 .navigation .link:hover {
-    color: var(--akcent-color)
+    color: var(--akcent-color);
 }
 .contacts .link {
-    display: block;
+    display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-    
+    align-items: center;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
 }
 .contacts .link:focus,
 .contacts .link:hover {
     color: var(--akcent-color);
+    fill: var(--akcent-color);
 }
+.contacts .icon{
+    margin-right: 10px;
+}
+.contacts .icon .envelope{
+    padding-top: 34px;
+    padding-bottom: 34px;
+}
+
 /*main*/
 .section .title,
 .team-section .title {
@@ -143,9 +155,24 @@ a {
 
 /*Герой*/
 .hero {
-    background-color: var(--footer-bg);
+    background-color: var(--hero-bg-color);
     text-align: center;
-    padding-top: 200px;padding-bottom: 200px;
+    height: 600px;
+}
+.overlay{
+    width: 1600px;
+    height: 100%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../imges/herobg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .hero-box{
     width: 696px;
@@ -240,9 +267,7 @@ a {
 }
 
 /*Команда*/
-.command{
 
-}
 .team{
     display: flex;
     justify-content: center;
