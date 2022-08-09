@@ -138,10 +138,7 @@ a {
 .contacts .icon{
     margin-right: 10px;
 }
-.contacts .icon .envelope{
-    padding-top: 34px;
-    padding-bottom: 34px;
-}
+
 
 /*main*/
 .section .title,
@@ -222,6 +219,11 @@ a {
 }
 .principles .list:not(:last-child){
     margin-right: 30px;
+}
+.principles .list .icon{
+    margin-bottom: 30px;
+    background-color: var(--secondary-background-color);
+    border-radius: 4px;
 }
 .principles .list .title {
     margin-bottom: 10px;
