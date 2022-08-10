@@ -8,6 +8,7 @@
 Альтернативний колір тексту #FFFFFF;
 Альтернативний колір другорядного тексту rgba(255, 255, 255, 0.6)
 Фон футера #2F303A;
+колір логотипів кліентів #AFB1B8;
 */
 :root {
     --primery-text-colop: #212121;
@@ -18,6 +19,7 @@
     --logo-text-color: #000000;
     --footer-bg: #2F303A;
     --hero-bg-color: #C4C4C4;
+    --icons-color: #AFB1B8;
     --hero-btn-hov-color: #188CE8;
     --footer-text-secondary-color: rgba(255, 255, 255, 0.6);
 }
@@ -139,10 +141,10 @@ a {
     margin-right: 10px;
 }
 
-
 /*main*/
 .section .title,
-.team-section .title {
+.team-section .title,
+.clients .title{
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
@@ -225,7 +227,8 @@ a {
     background-color: var(--secondary-background-color);
     border-radius: 4px;
 }
-.principles .list .title {
+.principles .list .title,
+.social-linkbox .title{
     margin-bottom: 10px;
    
     font-weight: 700;
@@ -234,9 +237,7 @@ a {
     text-align: left;
     text-transform: uppercase;
     color: var(--primery-text-colop);
-
 }
-
 .principles .list .content {
     font-weight: 400;
     font-size: 14px;
@@ -304,21 +305,72 @@ a {
     line-height: 1.18;
     text-align: center;
     color: var(--secondary-text-color);
+    margin-bottom: 16px;
 }
 .team-section .content-box{
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
-
+.social-list{
+    display: flex;
+}
+.social-list .link{
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    fill:var(--icons-color);
+    background-color: var(--background-color);
+    border-radius: 50%;
+}
+.social-list .item:not(:last-child){
+    margin-right: 10px;
+}
+.social-list .link:hover,
+.social-list .link:focus{
+    fill: var(--background-color);
+    background-color: var(--akcent-color);
+}
+/*Клієнти*/
+.clients{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.clients .list{
+    display: flex;
+}
+.clients .link{
+    display: block;
+    width: 170px;
+    height: 92px;
+    fill: var(--icons-color);
+    background-color: var(--background-color);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border: 1px solid var(--icons-color);
+    border-radius: 4px;
+}
+.clients .link:hover,
+.clients .list:focus{
+    fill:var(--akcent-color);
+    border-color: var(--akcent-color);
+}
+.clients .list .item:not(:last-child){
+    margin-right: 30px;
+}
 /*Підвал*/
 .footer {
     background-color: var(--footer-bg);
     padding-top: 60px;
     padding-bottom: 60px;
 }
-
+.bottom{
+    display: flex;
+}
 .footer .logo {
     color: var(--background-color);
     margin-bottom: 20px;
@@ -351,7 +403,35 @@ a {
 .address .third:focus {
     color: var(--akcent-color)
 }
-
+.social-linkbox{
+display: flex;
+flex-direction: column;
+margin-left: 70px;
+padding-top: 12px;
+}
+.social-linkbox .list{
+    display: flex;
+}
+.social-linkbox .title {
+    margin-bottom: 20px;
+    color: var(--background-color);
+}
+.social-linkbox .item:not(:last-child){
+    margin-right: 10px;
+}
+.social-linkbox .link{
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    fill: var(--background-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+.social-linkbox .link:hover,
+.social-linkbox .link:focus{
+    background-color:var(--akcent-color);
+}
 /*Стилі для портфоліо*/
 .portfolio{
     padding-top: 94px;
@@ -389,6 +469,7 @@ a {
 .portfolio .list .button:hover {
     background-color: var(--akcent-color);
     color: var(--background-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .card-list{
     display: flex;
@@ -404,7 +485,13 @@ a {
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
-    }
+}
+.card-list .item:focus,
+.card-list .item:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+     0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .portfolio .card-list .title {
     margin-bottom: 4px;
