@@ -222,10 +222,15 @@ a {
 .principles .list:not(:last-child){
     margin-right: 30px;
 }
-.principles .list .icon{
+.principles .list .thumb{
+    display: flex;
     margin-bottom: 30px;
     background-color: var(--secondary-background-color);
     border-radius: 4px;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
 }
 .principles .list .title,
 .social-linkbox .title{
@@ -317,10 +322,11 @@ a {
     display: flex;
 }
 .social-list .link{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
-    padding: 12px;
     fill:var(--icons-color);
     background-color: var(--background-color);
     border-radius: 50%;
@@ -342,20 +348,18 @@ a {
     display: flex;
 }
 .clients .link{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 170px;
     height: 92px;
     fill: var(--icons-color);
     background-color: var(--background-color);
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 32px;
-    padding-right: 32px;
     border: 1px solid var(--icons-color);
     border-radius: 4px;
 }
 .clients .link:hover,
-.clients .list:focus{
+.clients .link:focus{
     fill:var(--akcent-color);
     border-color: var(--akcent-color);
 }
@@ -370,6 +374,7 @@ a {
 }
 .bottom{
     display: flex;
+    align-items: baseline;
 }
 .footer .logo {
     color: var(--background-color);
@@ -407,7 +412,6 @@ a {
 display: flex;
 flex-direction: column;
 margin-left: 70px;
-padding-top: 12px;
 }
 .social-linkbox .list{
     display: flex;
@@ -420,10 +424,11 @@ padding-top: 12px;
     margin-right: 10px;
 }
 .social-linkbox .link{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
-    padding: 12px;
     fill: var(--background-color);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
@@ -477,6 +482,10 @@ padding-top: 12px;
     gap: 30px;
     justify-content: center;
 }
+.portfolio .card-list .link{
+    display: block;
+    cursor: default;
+    }
 .card-head{
     padding-left: 24px;
     padding-right: 24px;
@@ -486,8 +495,8 @@ padding-top: 12px;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
 }
-.card-list .item:focus,
-.card-list .item:hover{
+.portfolio .card-list .link:focus,
+.portfolio .card-list .link:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
      0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
